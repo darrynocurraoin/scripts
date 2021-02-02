@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Take base64 encoded cli args and decode them spaced with a newline
+# Housed this in /usr/local/bin
+
+for i in "$@"; do 
+	echo "$i" | base64 -d && echo;
+done
